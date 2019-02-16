@@ -1,2 +1,14 @@
-<h1>Pins#index</h1>
+<h1>Tus Pins</h1>
+<br>
+
+<!--
 <p>Find me in app/views/pins/index.html.erb</p>
+-->
+
+<div class="container">
+  <div class="row">
+    <% @pins.each do |pin| %>
+        <%= render 'pins/card', pin:pin %>
+    <% end %>
+  </div>
+</div>

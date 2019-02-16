@@ -2,7 +2,17 @@
   <img src="<%= pin.photo %>" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title"><%= pin.name %></h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <p class="card-text"><%= pin.desc %></p>
+    <p class="card-text"><%= pin.likes.count %> likes</p>
+    <a href="/pins/<%=pin.id%>/like" 
+        data-method="POST" 
+        class="btn btn-primary">
+        Me gusta</a>
+
+    <% if pin.user == current_user %>
+      <%= link_to 'Editar', edit_pin_path(pin), class: 'btn btn-primary' %>
+      <%= link_to 'Borrar', pin_path(pin), method: 'DELETE', class: 'btn btn-primary' %>
+    <% end %>
+
   </div>
 </div>
