@@ -28,6 +28,10 @@ class PinsController < ApplicationController
     redirect_to pins_path
   end
 
+  def like_from_show
+    
+  end
+
   def create
     @pin = Pin.new(pins_params)
     @pin.user = current_user
