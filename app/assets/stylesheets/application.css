@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+ .img-custom {
+    height: 40px;
+}
+.img-circle {
+    border-radius: 50%
+}
+
+.custom-navcolor {
+    background-color: darkgray;
+    color: whitesmoke;
+
+}
