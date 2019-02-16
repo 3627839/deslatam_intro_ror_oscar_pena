@@ -1,11 +1,12 @@
 class PinsController < ApplicationController
-  before_action :set_pin, only: [:like, :destroy, :edit, :update]
+  before_action :set_pin, only: [:like, :show, :destroy, :edit, :update]
 
   def index
     @pins = Pin.all
   end
 
   def show
+
   end
 
   def edit

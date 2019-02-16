@@ -1,2 +1,7 @@
 <h1>Pins#show</h1>
-<p>Find me in app/views/pins/show.html.erb</p>
+
+<!--
+<%= @pin.name %>
+<%= @pin.desc %>
+-->
+<%= render('pins/card', pin: @pin) %>

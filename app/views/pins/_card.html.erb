@@ -1,5 +1,7 @@
 <div class="card" style="width: 18rem;">
+  <%= link_to pin_path(pin) do %>
   <img src="<%= pin.photo %>" class="card-img-top" alt="...">
+  <% end %>
   <div class="card-body">
     <h5 class="card-title"><%= pin.name %></h5>
     <p class="card-text"><%= pin.desc %></p>
