@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Pin.delete_all
+user = User.first
+
+3.times do |i|
+  Pin.create(
+    name: "Photo #{i}",
+    desc: 'adshgsad dsauhdas asdu adsuiadshuh sdauiasd',
+    photo: 'https://picsum.photos/200/200/?random',
+    user: user)
+end
